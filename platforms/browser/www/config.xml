@@ -6,12 +6,12 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>Second City Swingout 2018</name>
+    <name>Second City Swingout - 2018 Schedule</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Schedule of events for Second City Swingout 2018.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="trafficjamswing+scs2018@gmail.com" href="http://secondcityswingout.com">
+        Kristi-Lynn Jacovino and Traffic Jam! Swing
     </author>
     <content src="index.html" />
     <access origin="*" />
