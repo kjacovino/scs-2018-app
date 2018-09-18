@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.secondcityswingout.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Second City Swingout - 2018 Schedule</name>
+    <name>Second City Swingout Event Schedule</name>
     <description>
         Schedule of events for Second City Swingout 2018.
     </description>
