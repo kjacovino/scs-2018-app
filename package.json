@@ -1,0 +1,21 @@
+{
+  "name": "second-city-swingout-event-schedule",
+  "version": "1.0.0",
+  "description": "Schedule of events for Second City Swingout 2018.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjacovino/scs-2018-app.git"
+  },
+  "author": "Traffic Jam Swing and Kristi-Lynn Jacovino",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/kjacovino/scs-2018-app/issues"
+  },
+  "homepage": "https://github.com/kjacovino/scs-2018-app"
+}
