@@ -1,0 +1,144 @@
+/* COPYRIGHT 2018 KRISTI-LYNN JACOVINO */
+
+
+@font-face {
+    font-family: 'league-gothic_ital';
+    src: url('fonts/leaguegothic-italic-webfont.woff2') format('woff2'),
+         url('fonts/leaguegothic-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'league-gothic';
+    src: url('fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
+         url('fonts/leaguegothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.column, .columns {
+	padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+.header {
+	background: white;
+}
+
+.header .logo {
+	width: 75%;
+	
+}
+
+.header .date {
+	color: #CD2427;
+	font-family: "league-gothic_ital", sans-serif;
+	text-align: right;
+	margin-right:1.5rem;
+	position: relative;
+	margin-top:-1.3rem;
+	text-transform: uppercase;
+	transform: rotate(-11.5deg);
+	font-size: 1.7rem;
+	line-height: 1.6rem;
+}
+
+.row.pad-top {
+	padding-top: .8rem;
+}
+
+.tabs {
+	border: none !important;
+	background: none !important;
+}
+
+.tabs-title {
+    text-align: center;
+    font-family: "league-gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+#day-tabs .tabs-title {
+	width: 33.33333333333%;
+}
+
+.tabs-title a {
+	letter-spacing: .06rem;
+}
+
+#day-tabs .tabs-title a {
+	font-size: 1.4rem;
+	padding:.8rem 1.5rem;
+	color:white;
+	background: #B0DDEC;
+}
+
+#day-tabs .tabs-title > a:focus, #day-tabs .tabs-title > a[aria-selected='true'], #day-tabs .tabs-title > a:hover {
+	background: #333;
+	color:white;
+}
+
+#sat-type-tabs .tabs-title, #sun-type-tabs .tabs-title {
+	width: 50%;
+}
+
+#sat-level-tabs .tabs-title {
+	width:25%;
+}
+#sun-level-tabs .tabs-title {
+	width:33.333333333%;
+}
+
+#sat-type-tabs .tabs-title a, #sun-type-tabs .tabs-title a, #sat-level-tabs .tabs-title a, #sun-level-tabs .tabs-title a {
+	font-size: 1.3rem;
+	padding:.5rem 1.5rem;
+	color:#333;
+	background: #fff;
+}
+
+#sat-level-tabs .tabs-title a, #sun-level-tabs .tabs-title a {
+	font-size: 1.2rem;
+	padding:.5rem 0;
+}
+
+#sat-type-tabs .tabs-title > a:focus, #sat-type-tabs .tabs-title > a[aria-selected='true'], #sat-type-tabs .tabs-title > a:hover, #sun-type-tabs .tabs-title > a:focus, #sun-type-tabs .tabs-title > a[aria-selected='true'], #sun-type-tabs .tabs-title > a:hover {
+	background: #CD2427;
+	color:white;
+}
+
+#sat-level-tabs .tabs-title > a:focus, #sat-level-tabs .tabs-title > a[aria-selected='true'], #sat-level-tabs .tabs-title > a:hover, #sun-level-tabs .tabs-title > a:focus, #sun-level-tabs .tabs-title > a[aria-selected='true'], #sun-level-tabs .tabs-title > a:hover {
+	background: #B0DDEC;
+	color:white;
+}
+
+#sat-classes .tabs-panel, #sat-classes .columns, #sun-classes .tabs-panel, #sun-classes .columns, #sat-dances .tabs-panel, #sat-dances .columns, #sun-dances .tabs-panel, #sun-dances .columns {
+	padding: 0;
+}
+
+.tabs-content {
+	border: none;
+	background: none;
+	color:white;
+}
+
+.button {
+	padding:.7rem 1.6rem;
+	float:right;
+}
+
+h2 {
+	color:white;
+	text-transform: uppercase;
+	padding:0;
+	margin:1rem 0;
+	background-position: 0;
+	position: relative;
+	text-indent: 0;
+	letter-spacing: .06rem;
+	font-family: "league-gothic", sans-serif;
+	font-size: 1.8rem;
+}

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+    
+    Custom Code Copyright (c) 2018 KRISTI-LYNN JACOVINO
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; media-src *" />
+<!--     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+<!--     <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="shortcut icon" type="image/png" href="http://secondcityswingout.com/favicon.png"/>
+    <style>
+    @import url("https://use.typekit.net/vlq8ebv.css");
+    </style>
+    <title>Second City Swingout 2018</title>
+</head>
+
+<body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <a href="http://secondcityswingout.com"><img src="img/logo.svg" alt="Second City Swingout" /></a>
+        </div>
+        <div class="date">
+	        October 5&ndash;7, 2018<br />
+	        Chicago, IL
+        </div>
+      </div>
+      <div class="content">
+        <ul class="tabs" data-tabs id="day-tabs">
+	        <li class="tabs-title is-active"><a data-tabs-target="friday" href="#friday">Friday</a></li>
+	        <li class="tabs-title"><a data-tabs-target="saturday" href="#saturday">Saturday</a></li>
+	        <li class="tabs-title"><a data-tabs-target="sunday" href="#sunday">Sunday</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="day-tabs">
+	        <div class="tabs-panel is-active" id="friday">
+		        <div class="row">
+		        	<div class="small-12 columns">
+			        	<h2>Dance Location</h2>
+		        	</div>
+		        </div>
+		        <div class="row">
+		        	<div class="small-7 columns">
+			        	<p><strong>Shapiro Ballroom</strong><br />
+				        	1612 W Chicago Ave <br />
+				        	Chicago, IL 60622
+			        	</p>
+		        	</div>
+		        	<div class="small-5 columns">
+			        	<a href="https://www.google.com/maps/place/The+Shapiro+Ballroom/@41.896306,-87.670139,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2d2aa0e70b1:0x75509d7ce0eace0!8m2!3d41.896302!4d-87.667945" class="button">Map It</a>
+		        	</div>
+		        	<div class="small-12 columns">
+			        	<p>Metered street parking available on Chicago Ave, Division Blue Line stop is about a half mile away.</p>
+		        	</div>
+		        </div>
+		        <div class="row">
+		        	<div class="small-12 columns">
+			        	<h2>Dance Schedule</h2>
+			        	<table class="table hover unstriped">
+							<thead>
+								<tr>
+									<th width="40%">Time</th>
+									<th width="60%">Event</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>8:00pm</th>
+									<td>Doors</td>
+								</tr>
+								<tr>
+									<th>9:00</th>
+									<td>Band Set I</td>
+								</tr>
+								<tr>
+									<th>9:45</th>
+									<td>Contest Prelims</td>
+								</tr>
+								<tr>
+									<th>10:15</th>
+									<td>Band Set II</td>
+								</tr>
+								<tr>
+									<th>11:15</th>
+									<td>Contest Finals at Top of Band Set III</td>
+								</tr>
+								<tr>
+									<th>1:00am</th>
+									<td>Dance Ends</td>
+								</tr>
+							</tbody>
+						</table>
+		        	</div>
+		        </div>
+	        </div>
+	        <!-- END FRIDAY -->
+	        <!-- START SATURDAY -->
+	        <div class="tabs-panel" id="saturday">
+		        <div class="row pad-top">
+		        	<div class="small-12 columns">
+			        	<ul class="tabs" data-tabs id="sat-type-tabs">
+				        	<li class="tabs-title is-active"><a data-tabs-target="sat-classes" href="classes">Classes</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sat-dances" href="dances">Dances</a></li>
+			        	</ul>
+		        	</div>
+		        </div>
+		        <div class="tabs-content" data-tabs-content="sat-type-tabs">
+					<div class="tabs-panel is-active" id="sat-classes">
+			        	<ul class="tabs" data-tabs id="sat-level-tabs">
+				        	<li class="tabs-title is-active"><a data-tabs-target="sat-beginner" href="beginner">Beginner</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sat-open" href="open">Open</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sat-advanced" href="advanced">Advanced</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sat-electives" href="electives">Electives</a></li>
+			        	</ul>
+			        	
+			        	<div class="tabs-content" data-tabs-content="sat-level-tabs">
+				        	<div class="tabs-panel is-active" id="sat-beginner">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Location</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Big City Swing</strong><br />
+								        	1850 N Western Ave <br />
+											Chicago, IL 60647
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Big+City+Swing/@41.9154619,-87.6897451,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cda228743ff:0x1802a8932d4b7473!8m2!3d41.9154579!4d-87.6875511" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Metered street parking available on Western Ave, Western Blue Line stop is less than a block away.</p>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>10:30</th>
+													<td>Intro to Lindy Hop</td>
+												</tr>
+												<tr>
+													<th>12:30</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2-4:00</th>
+													<td>Swinging Out</td>
+												</tr>
+												<tr>
+													<th>4:30-5:30</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+				        	</div>
+				        	<div class="tabs-panel" id="sat-open">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Location</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Perno Studio</strong><br />
+								        	1956 W Grand Ave <br />
+											Chicago, IL 60622
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Perno+Photography+Ltd/@41.8910298,-87.6788103,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d36735c25f3:0x33e9c19503f585dc!8m2!3d41.8910298!4d-87.6766216" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Damen Ave, Ashland Green and Pink Line stop is about a mile away.</p>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Downstairs Track Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>10:30</th>
+													<td>Jenny &amp; Christian</td>
+												</tr>
+												<tr>
+													<th>12:30</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2-4:00</th>
+													<td>Mia &amp; Andy</td>
+												</tr>
+												<tr>
+													<th>4:30-5:30</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Upstairs Track Schedule Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>10:30</th>
+													<td>Mia &amp; Andy</td>
+												</tr>
+												<tr>
+													<th>12:30</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2-4:00</th>
+													<td>Naomi &amp; Peter</td>
+												</tr>
+												<tr>
+													<th>4:30-5:30</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+				        	</div>
+				        	<div class="tabs-panel" id="sat-advanced">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Location</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Fred Astaire Studio</strong><br />
+								        	1239 W Lake St <br />
+											Chicago, IL 60647
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Fred+Astaire+Dance+Studio+West+Loop/@41.885225,-87.6605477,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d27f73f2193:0x1214217574dd3b05!8m2!3d41.885225!4d-87.6583597" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Lake St, Morgan and Ashland Green and Pink Line stops are about a quarter mile away.</p>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>10:30</th>
+													<td>Naomi &amp; Peter</td>
+												</tr>
+												<tr>
+													<th>12:30</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2-4:00</th>
+													<td>Jon &amp; Christian</td>
+												</tr>
+												<tr>
+													<th>4:30-5:30</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+				        	</div>
+				        	<div class="tabs-panel" id="sat-electives">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Electives</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Location</th>
+													<th width="60%">Electives</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>Perno Studio Downstairs</th>
+													<td>Bril Barrett - Tap</td>
+												</tr>
+												<tr>
+													<th>Perno Studio Upstairs</th>
+													<td>Jon - Solo Jazz</td>
+												</tr>
+												<tr>
+													<th>Fred Astaire Studio</th>
+													<td>Jenny &amp; Christian - St. Louis Shag I</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Elective Locations</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Perno Studio</strong><br />
+								        	1956 W Grand Ave <br />
+											Chicago, IL 60622
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Perno+Photography+Ltd/@41.8910298,-87.6788103,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d36735c25f3:0x33e9c19503f585dc!8m2!3d41.8910298!4d-87.6766216" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Damen Ave, Ashland Green and Pink Line stop is about a mile away.</p>
+						        	</div>
+						        </div>
+						        <hr />
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Fred Astaire Studio</strong><br />
+								        	1239 W Lake St <br />
+											Chicago, IL 60647
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Fred+Astaire+Dance+Studio+West+Loop/@41.885225,-87.6605477,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d27f73f2193:0x1214217574dd3b05!8m2!3d41.885225!4d-87.6583597" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Lake St, Morgan and Ashland Green and Pink Line stops are about a quarter mile away.</p>
+						        	</div>
+						        </div>
+				        	</div>
+			        	</div>
+					</div>
+		        </div>
+		        <div class="tabs-content" data-tabs-content="sat-type-tabs">
+					<div class="tabs-panel" id="sat-dances">
+						<div class="row">
+				        	<div class="small-12 columns">
+					        	<h2>Main Dance Location</h2>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-7 columns">
+					        	<p><strong>Chicago History Museum</strong><br />
+						        	1601 N Clark St <br />
+									Chicago, IL 60614
+					        	</p>
+				        	</div>
+				        	<div class="small-5 columns">
+					        	<a href="https://www.google.com/maps/place/Chicago+History+Museum/@41.9120417,-87.6336857,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd343bd18fb6d:0x4f731cdb732d79d1!8m2!3d41.9120377!4d-87.63149175" class="button">Map It</a>
+				        	</div>
+				        	<div class="small-12 columns">
+					        	<p>Metered street parking available on Clark St, Sedgwick Brown Line and Clark/Division Red Line stops are about a half mile away.</p>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-12 columns">
+					        	<h2>Main Dance Schedule</h2>
+					        	<table class="table hover unstriped">
+									<thead>
+										<tr>
+											<th width="40%">Time</th>
+											<th width="60%">Event</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>8:00pm</th>
+											<td>Doors</td>
+										</tr>
+										<tr>
+											<th>8:30</th>
+											<td>Live Music</td>
+										</tr>
+										<tr>
+											<th>12:00am</th>
+											<td>Dance Ends</td>
+										</tr>
+									</tbody>
+								</table>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-12 columns">
+					        	<h2>Late Night Dance Location</h2>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-7 columns">
+					        	<p><strong>Forteza Fitness</strong><br />
+						        	4437 N Ravenswood Ave <br />
+									Chicago, IL 60640
+					        	</p>
+				        	</div>
+				        	<div class="small-5 columns">
+					        	<a href="https://www.google.com/maps/place/Forteza+Fitness,+Physical+Culture+and+Martial+Arts/@41.9626696,-87.6761757,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd23c64808059:0xf303bdc243cc194c!8m2!3d41.9626656!4d-87.6739817" class="button">Map It</a>
+				        	</div>
+				        	<div class="small-12 columns">
+					        	<p>Free street parking is available on Ravenswood, Montrose Brown Line is about a block away.</p>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-12 columns">
+					        	<h2>Late Night Dance Schedule</h2>
+					        	<table class="table hover unstriped">
+									<thead>
+										<tr>
+											<th width="40%">Time</th>
+											<th width="60%">Event</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>12:45am</th>
+											<td>Doors</td>
+										</tr>
+										<tr>
+											<th>1:00</th>
+											<td>Live Music</td>
+										</tr>
+										<tr>
+											<th>3:00am</th>
+											<td>Dance Ends</td>
+										</tr>
+									</tbody>
+								</table>
+				        	</div>
+				        </div>
+					</div>
+		        </div>
+		        
+	        </div>
+	        <!-- END SATURDAY -->
+	        <!-- START SUNDAY -->
+	        <div class="tabs-panel" id="sunday">
+		        <div class="row pad-top">
+		        	<div class="small-12 columns">
+			        	<ul class="tabs" data-tabs id="sun-type-tabs">
+				        	<li class="tabs-title is-active"><a data-tabs-target="sun-classes" href="sun-classes">Classes</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sun-dances" href="sun-dances">Dance</a></li>
+			        	</ul>
+		        	</div>
+		        </div>
+		        <div class="tabs-content" data-tabs-content="sun-type-tabs">
+					<div class="tabs-panel is-active" id="sun-classes">
+			        	<ul class="tabs" data-tabs id="sun-level-tabs">
+				        	<li class="tabs-title is-active"><a data-tabs-target="sun-open" href="open">Open</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sun-advanced" href="advanced">Advanced</a></li>
+				        	<li class="tabs-title"><a data-tabs-target="sun-electives" href="electives">Electives</a></li>
+			        	</ul>
+			        	
+			        	<div class="tabs-content" data-tabs-content="sun-level-tabs">
+				        	<div class="tabs-panel is-active" id="sun-open">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Location</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Perno Studio</strong><br />
+								        	1956 W Grand Ave <br />
+											Chicago, IL 60622
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Perno+Photography+Ltd/@41.8910298,-87.6788103,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d36735c25f3:0x33e9c19503f585dc!8m2!3d41.8910298!4d-87.6766216" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Damen Ave, Ashland Green and Pink Line stop is about a mile away.</p>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Downstairs Track Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10:30am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>11:00</th>
+													<td>Naomi &amp; Peter</td>
+												</tr>
+												<tr>
+													<th>1:00</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2:15-4:15</th>
+													<td>Jenny &amp; Jon</td>
+												</tr>
+												<tr>
+													<th>4:45-5:45</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Upstairs Track Schedule Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10:30am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>11:00</th>
+													<td>Jenny &amp; Christian</td>
+												</tr>
+												<tr>
+													<th>1:00</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2:15-4:15</th>
+													<td>Mia &amp; Andy</td>
+												</tr>
+												<tr>
+													<th>4:45-5:45</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+				        	</div>
+				        	<div class="tabs-panel" id="sun-advanced">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Location</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Fred Astaire Studio</strong><br />
+								        	1239 W Lake St <br />
+											Chicago, IL 60647
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Fred+Astaire+Dance+Studio+West+Loop/@41.885225,-87.6605477,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d27f73f2193:0x1214217574dd3b05!8m2!3d41.885225!4d-87.6583597" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Lake St, Morgan and Ashland Green and Pink Line stops are about a quarter mile away.</p>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Track Schedule</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Time</th>
+													<th width="60%">Event</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>10:30am</th>
+													<td>Doors</td>
+												</tr>
+												<tr>
+													<th>11:00</th>
+													<td>Mia &amp; Andy</td>
+												</tr>
+												<tr>
+													<th>1:00</th>
+													<td>Lunch</td>
+												</tr>
+												<tr>
+													<th>2:15-4:15</th>
+													<td>Naomi &amp; Peter</td>
+												</tr>
+												<tr>
+													<th>4:45-5:45</th>
+													<td>Electives</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+				        	</div>
+				        	<div class="tabs-panel" id="sun-electives">
+					        	<div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Electives</h2>
+							        	<table class="table hover unstriped">
+											<thead>
+												<tr>
+													<th width="40%">Location</th>
+													<th width="60%">Electives</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>Perno Studio Downstairs</th>
+													<td>Jenny &amp; Christian - St. Louis Shag II</td>
+												</tr>
+												<tr>
+													<th>Perno Studio Upstairs</th>
+													<td>Ken Watkins - Chicago Steppin'</td>
+												</tr>
+												<tr>
+													<th>Fred Astaire Studio</th>
+													<td>Jon - DJ Forum</td>
+												</tr>
+											</tbody>
+										</table>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-12 columns">
+							        	<h2>Elective Locations</h2>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Perno Studio</strong><br />
+								        	1956 W Grand Ave <br />
+											Chicago, IL 60622
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Perno+Photography+Ltd/@41.8910298,-87.6788103,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d36735c25f3:0x33e9c19503f585dc!8m2!3d41.8910298!4d-87.6766216" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Damen Ave, Ashland Green and Pink Line stop is about a mile away.</p>
+						        	</div>
+						        </div>
+						        <hr />
+						        <div class="row">
+						        	<div class="small-7 columns">
+							        	<p><strong>Fred Astaire Studio</strong><br />
+								        	1239 W Lake St <br />
+											Chicago, IL 60647
+							        	</p>
+						        	</div>
+						        	<div class="small-5 columns">
+							        	<a href="https://www.google.com/maps/place/Fred+Astaire+Dance+Studio+West+Loop/@41.885225,-87.6605477,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d27f73f2193:0x1214217574dd3b05!8m2!3d41.885225!4d-87.6583597" class="button">Map It</a>
+						        	</div>
+						        	<div class="small-12 columns">
+							        	<p>Free street parking available on Lake St, Morgan and Ashland Green and Pink Line stops are about a quarter mile away.</p>
+						        	</div>
+						        </div>
+				        	</div>
+			        	</div>
+					</div>
+		        </div>
+		        <div class="tabs-content" data-tabs-content="sun-type-tabs">
+					<div class="tabs-panel" id="sun-dances">
+						<div class="row">
+				        	<div class="small-12 columns">
+					        	<h2>Swing &amp; Soul Party Location</h2>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-7 columns">
+					        	<p><strong>Forteza Fitness</strong><br />
+						        	4437 N Ravenswood Ave <br />
+									Chicago, IL 60640
+					        	</p>
+				        	</div>
+				        	<div class="small-5 columns">
+					        	<a href="https://www.google.com/maps/place/Forteza+Fitness,+Physical+Culture+and+Martial+Arts/@41.9626696,-87.6761757,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd23c64808059:0xf303bdc243cc194c!8m2!3d41.9626656!4d-87.6739817" class="button">Map It</a>
+				        	</div>
+				        	<div class="small-12 columns">
+					        	<p>Free street parking is available on Ravenswood, Montrose Brown Line is about a block away.</p>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<div class="small-12 columns">
+					        	<h2>Swing &amp; Soul Party Schedule</h2>
+					        	<table class="table hover unstriped">
+									<thead>
+										<tr>
+											<th width="40%">Time</th>
+											<th width="60%">Event</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>7:45pm</th>
+											<td>Doors</td>
+										</tr>
+										<tr>
+											<th>8-11:00pm</th>
+											<td>DJ's Swing &amp; Soul</td>
+										</tr>
+									</tbody>
+								</table>
+				        	</div>
+				        </div>
+					</div>
+		        </div>
+	        </div>
+	        <!-- END SUNDAY -->
+        </div>
+      </div>
+    </div>
+<!--
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+-->
+	<script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+<!--
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+-->
+    
+</body>
+
+</html>

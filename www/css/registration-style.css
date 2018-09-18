@@ -1,0 +1,153 @@
+body {
+	font-family: 'helvetica',arial,sans-serif;
+	background: url('http://secondcityswingout.com/img/logo.svg') center 50px no-repeat;
+	background-size: 400px;
+	margin:300px 0 0 0;
+	padding:0;
+}
+
+input[type=text] {
+	padding:8px 10px;
+	width:100%;
+	font-size: 1em;
+}
+
+input[type=radio], input[type=checkbox] {
+	margin-right:1rem;
+}
+
+#s15841 .sectionHeaderWrapper, #s15841  .itemdescriptioncell {
+	display: none;
+}
+
+select {
+	font-size: 1em;
+  height: 35px;
+}
+
+input[type=submit], input[type=button], .button {
+	background: #B1DBE9;
+	color:#fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	border:none;
+	padding:10px 40px;
+	font-size: 1rem;
+	transition: background,.5s;
+	margin-bottom:3rem;
+	text-decoration: none;
+}
+
+input[type=submit]:hover, input[type=button]:hover, .button:hover {
+	background: #91BAC8;
+	cursor: pointer;
+
+}
+
+#s15841 .inputcell {
+	text-align: center;
+}
+
+#BodyTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#viewbookingoptions div {
+	margin-bottom:.5em;
+}
+
+#Introduction {
+	margin-bottom: 2em;
+}
+
+#bookagain {
+	display: none;
+}
+
+#returntobooking {
+
+}
+
+ul {
+	line-height: 1.6rem;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+p {
+	margin-top:2em;
+	margin-bottom:.5em;
+}
+
+.errorText p {
+	color:red;
+}
+
+#wrapperdiv, .thank-you-wrap, body.paypal > div {
+	max-width: 60vw;
+	margin:auto;
+}
+
+.sectionWrapper {
+	margin-bottom:1rem;
+}
+
+.sectionHeaderWrapper {
+	background: #91BAC8;
+	padding:.5rem;
+	text-align: center;
+	color:#fff;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin-top:2rem;
+}
+
+.itemdescriptioncell, .captioncell {
+	line-height: 1.5em;
+}
+
+#returntobooking, #returntobookingbottom {
+	border:1px solid #cecece;
+	background: #efefef;
+	padding:1.5em;
+}
+
+#returntobookingbottom {
+	margin-bottom:2em;
+	margin-top:2em;
+}
+
+#sCostSummary .fieldwrapper {
+	margin-bottom:2em;
+}
+
+#sCostSummary .fieldwrapper .itemdescriptioncell {
+	margin-bottom:.5em;
+}
+
+#sCostSummary .sectionHeaderWrapper {
+	margin-bottom:2em;
+}
+
+@media screen and (max-width:500px) {
+	body {
+		background-size: 300px;
+		margin:250px 0 0 0;
+	}
+	form {
+		max-width:100vw;
+	}
+	.fieldwrapper {
+		padding-left: 4vw;
+		padding-right: 4vw;
+	}
+}
+
+#i73209_PaymentMethod_Paypal3, #label_i73209_PaymentMethod_Paypal3 {
+	display: none !important;
+}
